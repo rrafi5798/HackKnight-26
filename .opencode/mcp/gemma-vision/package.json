@@ -1,0 +1,11 @@
+{
+  "name": "gemma-vision-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local MCP server exposing gemma4:e4b on Ollama as an image analysis tool",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.5.4"
+  }
+}
