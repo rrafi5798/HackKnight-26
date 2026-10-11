@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f2" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111716" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="BlindSpot helps blind and low-vision people navigate indoor spaces with clear spoken directions." />
+    <title>BlindSpot | Indoor wayfinding</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#navigate" aria-label="BlindSpot home">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span>blindspot</span>
+        </a>
+        <p class="sidebar-label">WAYFINDING</p>
+        <nav class="primary-nav" aria-label="Primary">
+          <button class="nav-link is-active" type="button" data-page="navigate" aria-current="page">
+            <span class="nav-glyph" aria-hidden="true">↗</span>
+            <span>Navigate</span>
+          </button>
+          <button class="nav-link" type="button" data-page="spaces">
+            <span class="nav-glyph" aria-hidden="true">▦</span>
+            <span>My spaces</span>
+          </button>
+          <button class="nav-link" type="button" data-page="settings">
+            <span class="nav-glyph" aria-hidden="true">◉</span>
+            <span>Access settings</span>
+          </button>
+        </nav>
+        <div class="sidebar-space">
+          <p class="sidebar-label">CURRENT SPACE</p>
+          <div class="space-chip">
+            <span class="space-icon" aria-hidden="true">C</span>
+            <span><strong>Cedar Hall</strong><small>Level 1 · Sample map</small></span>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <span>Maps stay on this device</span>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <div class="breadcrumbs" aria-label="Current location">
+            <span>Cedar Hall</span><span aria-hidden="true">/</span><strong>Level 1</strong>
+          </div>
+          <div class="topbar-actions">
+            <span class="connection-label"><span class="connection-icon" aria-hidden="true">◌</span> Sample map loaded</span>
+            <button class="icon-button" id="focus-toggle" type="button" aria-pressed="false" aria-label="Enter eyes-free focus mode">
+              <span aria-hidden="true">⛶</span>
+              <span class="focus-button-label">Focus mode</span>
+            </button>
+          </div>
+        </header>
+        <main id="main" tabindex="-1"></main>
+      </div>
+    </div>
+    <div class="sr-only" id="live-announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="sr-only" id="urgent-announcer" role="alert" aria-live="assertive" aria-atomic="true"></div>
+  </body>
+</html>
